@@ -14,7 +14,15 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import TextField from "@material-ui/core/TextField";
 
 class Login extends React.Component {
+
+  goToHome = () => {
+    console.log('haha')
+    this.props.history.push('/home')
+    
+  }
   render() {
+    console.log(this.props,'unsa naa ane');
+    
     return (
       <div>
         <AppBar position="static">
@@ -56,7 +64,7 @@ class Login extends React.Component {
                   <TextField label="Password" fullWidth />
                   <br />
                   <br />
-                  <Button variant="contained" color="primary">
+                  <Button onClick={this.goToHome} variant="contained" color="primary">
                     Login
                   </Button>
                 </CardContent>

@@ -10,13 +10,13 @@ export default (state = initialState, action) => {
     case ACTION_TYPES.LOADING_START:
       return update(state, {
         loading: {
-          $set: true,
+          $set: action.data, //  action.data  is (true,false) value
         },
       });
     case ACTION_TYPES.LOADING_STOP:
       return update(state, {
         loading: {
-          $set: false,
+          $set: action.data, //  action.data  is (true,false) value
         },
       });
     default:
