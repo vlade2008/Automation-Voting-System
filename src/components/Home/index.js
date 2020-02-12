@@ -8,7 +8,7 @@ import { bindActionCreators } from "redux";
 import * as loadingActions from "../../actions/loadingActions";
 class Home extends React.Component {
   onStartExecute = () => {
-    this.props.loadingActions.start(true);
+    this.props.loadingActions.start(true); // execute file actions/loadingActions.js line 4
   };
   onStopExecute = () => {
     this.props.loadingActions.stop(false);
